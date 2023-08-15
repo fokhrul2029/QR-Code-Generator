@@ -1,12 +1,17 @@
 function generateQRCode() {
   const data = document.getElementById("dataInput").value;
-  const qrcodeContainer = document.getElementById("qrcode");
+  const size = parseInt(document.getElementById('sizeInput').value) || 128;
+  let qrcodeContainer = document.getElementById("qrcode");
+  if(!qrcodeContainer){
+    qrcodeContainer.textContant = "Inter Data"
+  }
   qrcodeContainer.innerHTML = "";
 
+  
   const qrcode = new QRCode(qrcodeContainer, {
     text: data,
-    width: 128,
-    height: 128,
+    width: size,
+    height: size,
   });
 }
 

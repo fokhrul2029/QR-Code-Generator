@@ -9,10 +9,11 @@
   <body>
     <div id="container">
       <h1>QR Code Generator</h1>
-      <div id="qrcode"></div>
-      <input type="text" id="dataInput" placeholder="Enter data" />
-      <button onclick="generateQRCode()">Generate QR Code</button> <br>
-      
+      <div id="qrcode">QR Code</div>
+      <input type="text" id="dataInput" value="Enter Data" placeholder="Enter data" />
+      <input type="number" id="sizeInput" placeholder="Custom QR-Code Size" min="1">
+      <button onclick="generateQRCode()">Generate QR Code</button> <br />
+
       <button onclick="downloadQRCode()">Download as JPG</button>
     </div>
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
