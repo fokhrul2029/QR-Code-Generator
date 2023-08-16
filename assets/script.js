@@ -1,6 +1,7 @@
 function generateQRCode() {
   const data = document.getElementById("dataInput").value;
-  const size = parseInt(document.getElementById('sizeInput').value) || 128;
+  let size = document.getElementById('sizeInput').value 
+  size = parseInt(size) || 200
   let qrcodeContainer = document.getElementById("qrcode");
   if(!qrcodeContainer){
     qrcodeContainer.textContant = "Inter Data"
